@@ -13,7 +13,8 @@
             </div>
             <div class="bottom"></div>
           </div>
-          <h3>일상 현주 더보기</h3>
+          <b-button class="button" size="large" variant="outline-primary">일상 더보기<i class="material-icons">keyboard_arrow_down</i></b-button>
+
         </div>
         <div class="col-12 col-md">
           <div class="character">
@@ -26,7 +27,8 @@
             </div>
             <div class="bottom"></div>
           </div>
-          <h3>직장인 현주 더보기</h3>
+          <b-button class="button" size="large" variant="outline-primary">출근 더보기<i class="material-icons">keyboard_arrow_down</i></b-button>
+
         </div>
       </div>
     </div>
@@ -45,15 +47,15 @@
     background-color: lavender;
   }
 
-  .fullheight {
-    min-height: 100vh;
+  .row {
+    padding: 150px 0;
   }
 
   .character {
     position: relative;
     width: 200px;
     height: 200px;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
   }
 
   .face {
@@ -374,7 +376,11 @@
     }
   }
 
-  h3 {
-    margin-top: 50px;
+  .material-icons {
+    vertical-align: text-top;
+  }
+
+  .button{
+    cursor: pointer;
   }
 </style>
