@@ -4,32 +4,8 @@
       <div class="row align-items-center fullheight">
         <div class="row col-12">
           <h1 class="col-12">일상 현주 제보내용</h1>
-          <div class="col-4">
-            제보1
-          </div>
-          <div class="col-4">
-            제보2
-          </div>
-          <div class="col-4">
-            제보3
-          </div>
-          <div class="col-4">
-            제보1
-          </div>
-          <div class="col-4">
-            제보2
-          </div>
-          <div class="col-4">
-            제보3
-          </div>
-          <div class="col-4">
-            제보1
-          </div>
-          <div class="col-4">
-            제보2
-          </div>
-          <div class="col-4">
-            제보3
+          <div class="col-6 col-md-4" v-for="post in posts">
+            <p v-for="txt in post.post.split('<br>')">{{txt}}</p>
           </div>
         </div>
       </div>
@@ -38,8 +14,33 @@
 </template>
 
 <script>
+  import * as firebase from "firebase"
   export default {
-    name: 'daily-data'
+    name: 'daily-data',
+    props: ['firebaseDB'],
+    data () {
+      return {
+        posts: []
+      }
+    },
+    watch: {
+      firebaseDB: function (value) {
+        var ref = value.ref("posts")
+
+        ref.on("child_added", (snapshot) => this.getPosts(snapshot))
+      }
+    },
+    methods: {
+      getPosts(value) {
+        var post = {
+          key: value.key,
+          author: value.val().author,
+          post: value.val().post,
+          like: value.val().like
+        }
+        this.posts.push(post)
+      }
+    }
   }
 </script>
 
@@ -49,41 +50,34 @@
     min-height: 100vh;
   }
 
-  .row:not(.fullheight) {
-    max-width: 690px;
-    margin: 0 auto;
-  }
-
   h1 {
     margin-bottom: 50px;
   }
 
-  .col-4 {
+  .col-6 {
     position: relative;
-    display: grid;
-    -webkit-box-align: center;
-    align-items: center;
-    max-width: 200px;
+    width: 200px;
     height: 200px;
     margin: 10px 10px;
     border: 2px solid darkgray;
     border-radius: 5px;
     cursor: pointer;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
   }
 
-  .col-4::before {
+  .col-6::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../assets/like.png') no-repeat center;
+    background: rgba(0, 0, 0, 0.5) url('../assets/like.png') no-repeat center;
     background-size: contain;
     opacity: 0;
   }
 
-  .col-4:hover::before {
+  .col-6:hover::before {
     opacity: 0.8;
     transition: opacity 0.5s;
   }

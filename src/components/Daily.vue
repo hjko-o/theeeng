@@ -25,7 +25,7 @@
         </div>
         <div class="col-6">
           <img class="logo-img" src="../assets/instagram.png" onclick="window.open('http://instagram.com/diet_hjko')"/>
-          <h3>다이어트그램<br>diet_hjko</h3>
+          <h3>다이어트그램<br>diet_dduddu</h3>
         </div>
       </div>
     </div>

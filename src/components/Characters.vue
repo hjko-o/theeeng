@@ -18,7 +18,7 @@
         </div>
         <div class="col-12 col-md">
           <div class="character">
-            <div class="face professionally">
+            <div class="face worker">
               <div class="eyes left"></div>
               <div class="eyes right"></div>
               <div class="cheek left"></div>
@@ -245,7 +245,7 @@
     left: calc(50% + 5px);
   }
 
-  .face.professionally {
+  .face.worker {
     background-color: #5cb3fd;
     animation: bounce 1s infinite;
   }
@@ -270,7 +270,7 @@
     }
   }
 
-  .professionally .eyes {
+  .worker .eyes {
     position: absolute;
     top: 50px;
     width: 10px;
@@ -279,7 +279,7 @@
     border-radius: 50%;
   }
 
-  .professionally .eyes::before {
+  .worker .eyes::before {
     content: '';
     position: absolute;
     top: -15px;
@@ -290,7 +290,7 @@
     border: 2px solid #333;
   }
 
-  .professionally .eyes.left::after {
+  .worker .eyes.left::after {
     content: '';
     position: absolute;
     top: 5px;
@@ -300,15 +300,15 @@
     background: #333;
   }
 
-  .professionally .eyes.left {
+  .worker .eyes.left {
     left: 50px;
   }
 
-  .professionally .eyes.right {
+  .worker .eyes.right {
     right: 50px;
   }
 
-  .professionally .cheek {
+  .worker .cheek {
     position: absolute;
     top: 90px;
     width: 50px;
@@ -317,15 +317,15 @@
     background: rgba(255, 20, 147, 0.5);
   }
 
-  .professionally .cheek.left {
+  .worker .cheek.left {
     left: -10px;
   }
 
-  .professionally .cheek.right {
+  .worker .cheek.right {
     right: -10px;
   }
 
-  .professionally .mouse {
+  .worker .mouse {
     position: absolute;
     top: 100px;
     left: calc(50% - 50px);
@@ -338,7 +338,7 @@
     background: black;
   }
 
-  .professionally .mouse::before {
+  .worker .mouse::before {
     content: '';
     position: absolute;
     width: 10px;
@@ -346,7 +346,7 @@
     background: black;
   }
 
-  .professionally .mouse::before, .professionally .mouse::after {
+  .worker .mouse::before, .worker .mouse::after {
     content: '';
     position: absolute;
     width: 45px;
@@ -354,11 +354,11 @@
     background: #fff;
   }
 
-  .professionally .mouse::before {
+  .worker .mouse::before {
     left: 10px;
   }
 
-  .professionally .mouse::after {
+  .worker .mouse::after {
     right: 10px;
   }
 
