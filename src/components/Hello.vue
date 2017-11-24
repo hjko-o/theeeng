@@ -1,32 +1,17 @@
 <template>
   <div class="hello">
     <hello-world></hello-world>
-    <my-name></my-name>
-    <characters></characters>
-    <daily></daily>
-    <daily-data :firebaseDB="firebaseDB"></daily-data>
-    <add-data></add-data>
   </div>
 </template>
 
 <script>
 import HelloWorld from './HelloWorld'
-import MyName from './MyName'
-import Characters from './Characters'
-import Daily from './Daily'
-import DailyData from './DailyData'
-import AddData from './AddData.vue'
 
 import * as firebase from "firebase"
 
 export default {
   components: {
-    HelloWorld,
-    MyName,
-    Characters,
-    Daily,
-    DailyData,
-    AddData
+    HelloWorld
   },
   name: 'hello',
   data () {
