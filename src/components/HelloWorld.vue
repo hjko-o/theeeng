@@ -90,5 +90,6 @@
     font-weight: 600;
     letter-spacing: 15px;
     color: #333;
+    text-align: center;
   }
 </style>
