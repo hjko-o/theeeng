@@ -10,18 +10,18 @@
     <div class="portfolio-career">
       <div class="career">
         <h2>솔게이트 (15.06~16.04)</h2>
-        <h3>레몬커플(Remoncouple) 홈페이지 개발</h3>
-        <h3>레몬커플 관리자 페이지 디버깅</h3>
-        <h3>소개팅 홈페이지 기획 및 개발</h3>
+        <h3>레몬커플(Remoncouple) 홈페이지 개발<span><icon class="arrow-icon" name="chevron-circle-down" scale="1"></icon></span></h3>
+        <h3>레몬커플 관리자 페이지 디버깅<span><icon class="arrow-icon" name="chevron-circle-down" scale="1"></icon></span></h3>
+        <h3>소개팅 홈페이지 기획 및 개발<span><icon class="arrow-icon" name="chevron-circle-down" scale="1"></icon></span></h3>
       </div>
       <div class="career">
         <h2>데이코어 (16.06~17.12)</h2>
-        <h3>랩짐데이 홈페이지 개발</h3>
-        <h3>랩짐데이 트레이너 관리용 웹 개발</h3>
-        <h3>랩짐데이 홈페이지 리뉴얼 개발</h3>
-        <h3>데이코어 회사 홈페이지 개발</h3>
-        <h3>랩짐데이 그룹피티 관리용 웹 개발</h3>
-        <h3>짐데이 ios 앱 업데이트 개발</h3>
+        <h3>랩짐데이 홈페이지 개발<span><icon class="arrow-icon" name="chevron-circle-down" scale="1"></icon></span></h3>
+        <h3>랩짐데이 트레이너 관리용 웹 개발<span><icon class="arrow-icon" name="chevron-circle-down" scale="1"></icon></span></h3>
+        <h3>랩짐데이 홈페이지 리뉴얼 개발<span><icon class="arrow-icon" name="chevron-circle-down" scale="1"></icon></span></h3>
+        <h3>데이코어 회사 홈페이지 개발<span><icon class="arrow-icon" name="chevron-circle-down" scale="1"></icon></span></h3>
+        <h3>랩짐데이 그룹피티 관리용 웹 개발<span><icon class="arrow-icon" name="chevron-circle-down" scale="1"></icon></span></h3>
+        <h3>짐데이 ios 앱 업데이트 개발<span><icon class="arrow-icon" name="chevron-circle-down" scale="1"></icon></span></h3>
       </div>
     </div>
   </div>
@@ -56,6 +56,8 @@
   .portfolio-career {
     width: 100%;
     padding: 100px 30px;
+    background: url("/static/assets/portfolio_background_03.jpg") no-repeat center;
+    background-size: cover;
     background-color: azure;
     text-align: center;
   }
@@ -70,22 +72,33 @@
     margin: 0 0 30px 0;
     font-size: 15pt;
     font-weight: 900;
-    border: 2px solid #5d5d5d;
+    border: 2px solid #333;
     border-radius: 50px;
   }
 
   .portfolio-career h3 {
     padding-left: 10px;
+    margin-bottom: 0;
     font-size: 13pt;
     line-height: 50px;
-    border: 1px solid #dedede;
-    color: #5d5d5d;
+    border-bottom: 1px solid #333;
+    color: #333;
     text-align: left;
+    cursor: pointer;
+    /*background-color: rgba(255, 255, 255, 0.5);*/
   }
 
   .portfolio-career h3:hover {
     transform:translateY(-10px);
-    transition: transform 1s;
+    transition: transform 0.5s;
+  }
 
+  .portfolio-career span {
+    float: right;
+    padding-right: 10px;
+  }
+
+  .portfolio-career .arrow-icon {
+    vertical-align: middle;
   }
 </style>
