@@ -7,28 +7,16 @@
 <script>
 import HelloWorld from './HelloWorld'
 
-import * as firebase from "firebase"
-
 export default {
   components: {
     HelloWorld
   },
-  name: 'hello',
-  data () {
-    return {
-        firebaseDB: null
-    }
+  name: 'Hello',
+  created: function () {
+    console.log("created Hello DOM")
   },
   mounted: function () {
-    var config = {
-      apiKey: "AIzaSyDqgUSonXT1BLRczfgJ7hBfWnbZcgiyNIo",
-      authDomain: "my-web-faf45.firebaseapp.com",
-      databaseURL: "https://my-web-faf45.firebaseio.com",
-      storageBucket: "my-web-faf45.appspot.com"
-    }
-    firebase.initializeApp(config)
-
-    this.firebaseDB = firebase.database()
+    console.log("mounted Hello DOM")
   }
 }
 </script>

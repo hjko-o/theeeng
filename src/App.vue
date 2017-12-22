@@ -2,7 +2,7 @@
   <div id="app">
     <b-navbar toggleable toggle-breakpoint="sm" fixed="top" type="light" variant="faded">
       <b-navbar-brand tag="h1" class="mb-0" to="/">
-        <img class="logo" src="../static/assets/theeeng_logo.png"/>
+        <img class="logo" src="./assets/theeeng_logo.png"/>
       </b-navbar-brand>
       <b-nav-toggle target="nav_dropdown_collapse" href="#"></b-nav-toggle>
 
@@ -20,9 +20,27 @@
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import * as firebase from 'firebase'
+
+  export default {
+    name: 'App',
+    data () {
+      return {
+        firebaseDB: null
+      }
+    },
+    created: function () {
+      var config = {
+        apiKey: "AIzaSyDqgUSonXT1BLRczfgJ7hBfWnbZcgiyNIo",
+        authDomain: "my-web-faf45.firebaseapp.com",
+        databaseURL: "https://my-web-faf45.firebaseio.com",
+        storageBucket: "my-web-faf45.appspot.com"
+      }
+      firebase.initializeApp(config)
+
+      this.firebaseDB = firebase.database()
+    }
+  }
 </script>
 
 <style>
