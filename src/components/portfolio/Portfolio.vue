@@ -105,12 +105,32 @@
             <h6>
               Vue.js 프레임워크와 Material 디자인 라이브러리를 적용하여 개발하였으며, 별도의 디자인 가이드 없이 구글 어드민의 UI를 참고하여 개발하였습니다.
             </h6>
-            <img class="project-sample-image" src="../../assets/wannabe_web_1.png"/>
-            <img class="project-sample-image" src="../../assets/wannabe_web_2.png"/>
-            <img class="project-sample-image" src="../../assets/wannabe_web_3.png"/>
-            <img class="project-sample-image" src="../../assets/wannabe_web_4.png"/>
-            <img class="project-sample-image" src="../../assets/wannabe_web_5.png"/>
-            <img class="project-sample-image" src="../../assets/wannabe_web_6.png"/>
+            <div>
+              <tiny-slider :mouse-drag="true" :loop="false" items="1" gutter="20" controlsContainer="#buttons">
+                <div>
+                  <img class="slider-image" src="../../assets/wannabe_web_1.png"/>
+                </div>
+                <div>
+                  <img class="slider-image" src="../../assets/wannabe_web_2.png"/>
+                </div>
+                <div>
+                  <img class="slider-image" src="../../assets/wannabe_web_3.png"/>
+                </div>
+                <div>
+                  <img class="slider-image" src="../../assets/wannabe_web_4.png"/>
+                </div>
+                <div>
+                  <img class="slider-image" src="../../assets/wannabe_web_5.png"/>
+                </div>
+                <div>
+                  <img class="slider-image" src="../../assets/wannabe_web_6.png"/>
+                </div>
+              </tiny-slider>
+            </div>
+            <div id="buttons">
+              <div class="prev"><icon class="arrow-icon" name="angle-left" scale="1"></icon></div>
+              <div class="next"><icon class="arrow-icon" name="angle-right" scale="1"></icon></div>
+            </div>
           </div>
         </div>
       </div>
@@ -143,13 +163,20 @@
 </template>
 
 <script>
+  import VueTinySlider from 'vue-tiny-slider'
+  import 'tiny-slider/dist/tiny-slider.css'
+
   export default {
-    name: 'Portfolio'
+    name: 'Portfolio',
+    components: {
+      'tiny-slider': VueTinySlider
+    }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
+
   .fullheight {
     min-height: 100vh;
   }
@@ -247,4 +274,10 @@
     height: auto;
     margin: 20px 0;
   }
+
+  .slider-image {
+    width: 100%;
+  }
+
+
 </style>
